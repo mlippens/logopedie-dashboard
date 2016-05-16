@@ -6,6 +6,8 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import routes from './routes';
 import configureStore from './store/configureStore';
 import './app.global.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'react-bootstrap-datetimepicker/css/bootstrap-datetimepicker.css';
 
 const store = configureStore();
 const history = syncHistoryWithStore(hashHistory, store);
