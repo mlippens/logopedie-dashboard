@@ -17,7 +17,7 @@ class AgeCalculator extends React.Component {
     };
   }
 
-  componentUnmount() {
+  componentWillUnmount () {
     this.props.clear();
   }
   changeBirthdate(event) {
@@ -46,11 +46,11 @@ class AgeCalculator extends React.Component {
       <div style={topStyle}>
         <FormGroup>
           <ControlLabel>Geboortedatum</ControlLabel>
-          <DateTimeField inputFormat="DD/MM/YYYY" defaultText="" viewMode="months" onChange={this.changeBirthdate.bind(this)} />
+          <DateTimeField inputFormat="DD/MM/YYYY" defaultText="Vul een datum in" viewMode="months" onChange={this.changeBirthdate.bind(this)} />
         </FormGroup>
         <FormGroup>
           <ControlLabel>Onderzoeksdatum</ControlLabel>
-          <DateTimeField inputFormat="DD/MM/YYYY" defaultText=""  viewMode="months" onChange={this.changeResearchdate.bind(this)} />
+          <DateTimeField inputFormat="DD/MM/YYYY" defaultText="Vul een datum in"  viewMode="months" onChange={this.changeResearchdate.bind(this)} />
         </FormGroup>
 
         <Button bsStyle="primary" onClick={this.calculate.bind(this)}>Berekenen!</Button>
